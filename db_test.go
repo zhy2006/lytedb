@@ -128,7 +128,7 @@ func BenchmarkAdd(b *testing.B) {
 	}
 	defer func() {
 		db.Close()
-		os.Remove(path)
+		//os.Remove(path)
 	}()
 
 	u := user{
@@ -137,7 +137,7 @@ func BenchmarkAdd(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		id := fmt.Sprintf("id-%d", i)
+		id := fmt.Sprintf("user")
 		db.Add(id, u)
 	}
 
@@ -151,17 +151,13 @@ func BenchmarkGet(b *testing.B) {
 	}
 	defer func() {
 		db.Close()
-		os.Remove(path)
+		//os.Remove(path)
 	}()
 
-	u := user{
-		Age:  15,
-		Name: "Hello",
-	}
-
-	db.Add("user", u)
+	//db.Add("user", u)
 
 	for i := 0; i < b.N; i++ {
-		db.Get("user", &user{})
+		var temp user
+		db.Get("user", &temp)
 	}
 }
