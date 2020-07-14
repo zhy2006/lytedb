@@ -1,4 +1,4 @@
-module github.com/andresoro/lytedb
+module github.com/zhy2006/lytedb
 
 go 1.12
 
