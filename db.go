@@ -38,12 +38,8 @@ func New(path string) (*DB, error) {
 	}
 
 	// main collection to hold general values
-	/*
-		err = db.createBucket("main")
-		if err != nil {
-			return nil, err
-		}
-	*/
+
+	db.createBucket("main")
 
 	return db, nil
 }
