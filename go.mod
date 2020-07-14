@@ -1,5 +1,5 @@
-module github.com/andresoro/lytedb
+module github.com/zhy2006/lytedb
 
-go 1.12
+go 1.14
 
 require go.etcd.io/bbolt v1.3.2
